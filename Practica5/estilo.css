@@ -1,0 +1,42 @@
+.fuente{
+    font-family: 'Nunito', sans-serif;
+}
+
+.fuentePersonalizadaTitulo{
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+}
+
+
+.fuentePersonalizadaTexto{
+    font-family: 'Nunito', sans-serif;
+}
+
+
+#map{
+    width: 100%;
+    height: 500px;
+}
+
+
+.cuerpo{
+  
+    height: 100%;
+    background-image: url("https://cdn.pixabay.com/photo/2016/11/21/13/29/yellow-1845394_960_720.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#contenido{
+   
+    background-color: rgba(240, 248, 255, 0.822);
+    
+}
+
+
+
+.piePagina{
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+}
