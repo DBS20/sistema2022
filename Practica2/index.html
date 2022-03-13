@@ -9,18 +9,31 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+    <!--Hoja Estilo personalizada-->
+    <link rel="StyleSheet" href="estilo.css" type="text/css" media="screen">
+
+    <!--Tipografía-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,300&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,300;1,700&display=swap" rel="stylesheet">
+
+    
 </head>
-<body>
+<body class="cuerpo">
     
 
-    <div class="container">
+    <div class="container" id="contenido">
 
         <!--INICIO Titulo-->
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12 col-md-12">
-                        <h1 class="display-4">Datos de Navegador</h1><br>
+                        <h1 class="display-4 fuentePersonalizadaTitulo">Datos de Navegador</h1><br>
                     </div>
               </div>
             </div>
@@ -30,7 +43,7 @@
         <hr>
 
         <!--INICIO Obtener datos-->
-        <div class="container">
+        <div class="container fuentePersonalizadaTexto">
             <div class="row">
                 <div class="col-12">
                     <button  class=" text-center btn btn-warning" onclick="obtieneDatos()">Obtener datos del navegador</button>
@@ -92,13 +105,13 @@
 
 
         <!--INICIO Pie de Pagina-->
-        <div class="container-fluid bg-dark text-white" style="text-align: center">
+        <div class="container-fluid bg-dark text-white piePagina">
           
             <div class="col-12 py-3 px-2">
                 <label>Ingeniería en Software y Sistemas Computacionales</label><br>
                 <label>Diana Bojorquez Soto (70624)</label>
             </div>
-        </div>
+        </div><br>
         <!--Fin-->
 
 
