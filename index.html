@@ -4,25 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Índice</title>
+    <title>Sistemas Georeferenciados</title>
 
+
+    <!--Hojas de Estilo Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-</head>
-<body>
+    <!--Hoja Estilo personalizada-->
+    <link rel="StyleSheet" href="g.css" type="text/css" media="screen">
 
-    <div class="container">
+    <!--Tipografía-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,300&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,300;1,700&display=swap" rel="stylesheet">
+
+</head>
+<body class="cuerpo">
+
+    <div class="container" id="contenido">
 
         <!--INICIO Titulo-->
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-10 col-md-10">
-                        <h1 class="display-4">Sistemas Georeferenciales</h1><br>
+                        <h1 class="display-4 fuentePersonalizadaTitulo">Sistemas Georeferenciales</h1><br>
                     </div>
                     <div class="col-xl-2 col-md-2">
-                        <img src="https://cdn2.iconfinder.com/data/icons/custom-ios-14-1/60/Maps-256.png" style="width: 100px;" alt="Logo"> 
+                        <img id="icono" src="https://cdn2.iconfinder.com/data/icons/custom-ios-14-1/60/Maps-256.png" alt="Logo"> 
                     </div>
               </div>
             </div>
@@ -36,21 +50,21 @@
 
         <!--Parcial 1-->
         <hr>
-        <div class="container">
+        <div class="container filaCarrusel">
 
-            <h2>Parcial 1 - Practicas</h2><br>
+            <h2 class="fuentePersonalizadaTitulo">Parcial 1 - Practicas</h2><br>
             <div class="row">
                 <div class="col-xl-6">
                     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                            <img src="imagenes/img1.jpg" class="d-block w-100" alt="..." style="width: 400px; height: 350px;">
+                            <img src="imagenes/img1.jpg" class="d-block w-100 carruselimg" alt="...">
                             </div>
                             <div class="carousel-item">
-                            <img src="imagenes/img2.jpeg" class="d-block w-100" alt="..." style="width: 400px; height: 350px;">
+                            <img src="imagenes/img2.jpeg" class="d-block w-100 carruselimg" alt="...">
                             </div>
                             <div class="carousel-item">
-                            <img src="imagenes/img3.jpg" class="d-block w-100" alt="..." style="width: 400px; height: 350px;">
+                            <img src="imagenes/img3.jpg" class="d-block w-100 carruselimg" alt="...">
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
@@ -64,44 +78,45 @@
                     </div>
                 </div>
 
-                <div class="col-xl-6" style="overflow: scroll; height: 350px;">
+                <div class="col-xl-6 tablaScroll">
 
                     <!--INCIO Listado de Practicas-->
 
-                    <table class="table table-striped table-hover">
-                        <thead>
+                    <table class="table table-striped table-hover tablaDisenio">
+                        <thead class="fuentePersonalizadaTitulo">
                             <tr>
                               <th scope="col">#</th>
                               <th scope="col">Nombre</th>
                               <th scope="col">Descripción</th>
                             </tr>
-                          </thead>
-                          <tbody>
+                        </thead>
+                          <tbody class="fuentePersonalizadaTexto">
                                 <tr>
                                     <th scope="row">1</th>
-                                    <td><a href="2022/practica1/index.html">Practica 1</a></li></td>
+                                    <td><a class="colorLink" href="2022/practica1/index.html">Practica 1</a></li></td>
                                     <td>Plantilla base de diseño</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">2</th>
-                                    <td><a href="Practica2/index.html">Practica 2</a></td>
+                                    <td><a class="colorLink" href="Practica2/index.html">Practica 2</a></td>
                                     <td>Obtener datos del navegador</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">3</th>
-                                    <td><a href="Practica3/index.html">Practica 3</a></td>
+                                    <td><a class="colorLink" href="Practica3/index.html">Practica 3</a></td>
                                     <td>Obtención de coordenadas del ordenador</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">4</th>
-                                    <td><a href="Practica4/index.html">Practica 4</a></td>
+                                    <td><a class="colorLink" href="Practica4/index.html">Practica 4</a></td>
                                     <td>Obtención de mapa statico</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">5</th>
-                                    <td><a href="Practica5/index.html">Practica 5</a></td>
+                                    <td><a class="colorLink" href="Practica5/index.html">Practica 5</a></td>
                                     <td>Mapa dinámico</td>
                                 </tr>
+                                
                                 
                           </tbody>
         
@@ -111,7 +126,7 @@
 
                 </div>
 
-            </div>
+            </div><br>
 
             
 
@@ -121,21 +136,21 @@
 
         <!--Parcial 2-->
         <hr>
-        <div class="container">
+        <div class="container filaCarrusel">
 
-            <h2>Parcial 2 - Practicas</h2><br>
+            <h2 class="fuentePersonalizada">Parcial 2 - Practicas</h2><br>
             <div class="row">
                 <div class="col-xl-6">
                     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                            <img src="https://programacion.net/files/article/20160819020822_image-not-found.png" class="d-block w-100" alt="..." style="width: 400px; height: 350px;">
+                            <img src="https://programacion.net/files/article/20160819020822_image-not-found.png" class="d-block w-100 carruselimg" alt="...">
                             </div>
                             <div class="carousel-item">
-                            <img src="https://programacion.net/files/article/20160819020822_image-not-found.png" class="d-block w-100" alt="..." style="width: 400px; height: 350px;">
+                            <img src="https://programacion.net/files/article/20160819020822_image-not-found.png" class="d-block w-100 carruselimg" alt="...">
                             </div>
                             <div class="carousel-item">
-                            <img src="https://programacion.net/files/article/20160819020822_image-not-found.png" class="d-block w-100" alt="..." style="width: 400px; height: 350px;">
+                            <img src="https://programacion.net/files/article/20160819020822_image-not-found.png" class="d-block w-100 carruselimg" alt="...">
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
@@ -149,27 +164,27 @@
                     </div>
                 </div>
 
-                <div class="col-xl-6" style="overflow: scroll; height: 350px;">
+                <div class="col-xl-6 tablaScroll">
 
                     <!--INCIO Listado de Practicas-->
 
-                    <table class="table table-striped table-hover">
-                        <thead>
+                    <table class="table table-striped table-hover tablaDisenio">
+                        <thead class="fuentePersonalizadaTitulo">
                             <tr>
                               <th scope="col">#</th>
                               <th scope="col">Nombre</th>
                               <th scope="col">Descripción</th>
                             </tr>
                           </thead>
-                          <tbody>
+                          <tbody class="fuentePersonalizadaTexto">
                                 <tr>
                                     <th scope="row">1</th>
-                                    <td><a href="">----------</a></li></td>
+                                    <td><a class="colorLink" href="">----------</a></li></td>
                                     <td>..................</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">2</th>
-                                    <td><a href="">----------</a></li></td>
+                                    <td><a class="colorLink" href="">----------</a></li></td>
                                     <td>..................</td>
                                 </tr>
                           </tbody>
@@ -180,7 +195,7 @@
 
                 </div>
 
-            </div>
+            </div><br>
 
             
 
@@ -190,21 +205,21 @@
 
         <!--Parcial 3-->
         <hr>
-        <div class="container">
+        <div class="container filaCarrusel">
 
-            <h2>Parcial 3 - Practicas</h2><br>
+            <h2 class="fuentePersonalizada">Parcial 3 - Practicas</h2><br>
             <div class="row">
                 <div class="col-xl-6">
                     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                            <img src="https://programacion.net/files/article/20160819020822_image-not-found.png" class="d-block w-100" alt="..." style="width: 400px; height: 350px;">
+                            <img src="https://programacion.net/files/article/20160819020822_image-not-found.png" class="d-block w-100 carruselimg" alt="...">
                             </div>
                             <div class="carousel-item">
-                            <img src="https://programacion.net/files/article/20160819020822_image-not-found.png" class="d-block w-100" alt="..." style="width: 400px; height: 350px;">
+                            <img src="https://programacion.net/files/article/20160819020822_image-not-found.png" class="d-block w-100 carruselimg" alt="...">
                             </div>
                             <div class="carousel-item">
-                            <img src="https://programacion.net/files/article/20160819020822_image-not-found.png" class="d-block w-100" alt="..." style="width: 400px; height: 350px;">
+                            <img src="https://programacion.net/files/article/20160819020822_image-not-found.png" class="d-block w-100 carruselimg" alt="...">
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
@@ -218,27 +233,27 @@
                     </div>
                 </div>
 
-                <div class="col-xl-6" style="overflow: scroll; height: 350px;">
+                <div class="col-xl-6 tablaScroll">
 
                     <!--INCIO Listado de Practicas-->
 
-                    <table class="table table-striped table-hover">
-                        <thead>
+                    <table class="table table-striped table-hover tablaDisenio">
+                        <thead class="fuentePersonalizadaTitulo">
                             <tr>
                               <th scope="col">#</th>
                               <th scope="col">Nombre</th>
                               <th scope="col">Descripción</th>
                             </tr>
                           </thead>
-                          <tbody>
+                          <tbody class="fuentePersonalizadaTexto">
                                 <tr>
                                     <th scope="row">1</th>
-                                    <td><a href="">----------</a></li></td>
+                                    <td><a class="colorLink" href="">----------</a></li></td>
                                     <td>..................</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">2</th>
-                                    <td><a href="">----------</a></li></td>
+                                    <td><a class="colorLink" href="">----------</a></li></td>
                                     <td>..................</td>
                                 </tr>
                           </tbody>
@@ -249,7 +264,7 @@
 
                 </div>
 
-            </div>
+            </div><br>
 
             
 
@@ -262,13 +277,13 @@
       
 
         <!--INICIO Pie de Pagina-->
-        <div class="container-fluid bg-dark text-white" style="text-align: center">
+        <div class="container-fluid bg-dark text-white piePagina">
           
             <div class="col-12 py-3 px-2">
                 <label>Ingeniería en Software y Sistemas Computacionales</label><br>
                 <label>Diana Bojorquez Soto (70624)</label>
             </div>
-        </div>
+        </div><br>
     <!--Fin-->
 
 
