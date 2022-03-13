@@ -15,14 +15,16 @@
 .cuerpo{
   
     height: 100%;
-    background-image: url("https://www.softzone.es/app/uploads-softzone.es/2021/09/funciones-navegadores.jpg");
+    background-image: url("https://cdn.pixabay.com/photo/2015/09/05/20/03/globe-924927_960_720.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
 }
 
 #contenido{
+   
     background-color: rgba(240, 248, 255, 0.822);
+    padding: 120px;
 }
 
 .piePagina{

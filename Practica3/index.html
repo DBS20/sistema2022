@@ -23,13 +23,41 @@
      <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,300;1,700&display=swap" rel="stylesheet">
 
 </head>
-<body>
-    
-    <h1>HOLA MUNDO 3</h1>
-    <p>Has clic en el botón para obtener las coordenadas</p>
+<body class="cuerpo">
+    <br>
+    <div id="contenido" class="container">
+        
+        <!--INICIO-->
+        <div class="container fuentePersonalizadaTexto">
+            <div class="row">
+                <div class="col-xl-12 col-md-12">
+                    <h1 class="display-4 fuentePersonalizadaTitulo">Obtener Coordenadas</h1>
+                    <p>Has clic en el botón para obtener las coordenadas</p>
+                </div>
+            </div><hr>
 
-    <button class=" text-center btn btn-warning" onclick="getLocation()">obtener coordenadas</button>
-    <p id="mapa"></p>
+            <button class=" text-center btn btn-warning" onclick="getLocation()">obtener coordenadas</button><br><br>
+            <p id="mapa"></p>
+        </div>
+        <!--Fin-->
+
+
+        
+
+        <br>
+    </div>
+    <!--INICIO Pie de Pagina-->
+    <div class="container bg-dark text-white piePagina">
+          
+        <div class="col-12 py-3 px-2">
+            <label>Ingeniería en Software y Sistemas Computacionales</label><br>
+            <label>Diana Bojorquez Soto (70624)</label>
+        </div>
+
+    </div><br>
+    <!--Fin-->
+
+    
 
     <script>
         
@@ -45,7 +73,7 @@
 
         function muestraPosicion(posicion){
             mapa.innerHTML = "Latitud: " + posicion.coords.latitude 
-            + "<br>" + "Longitud: " + posicion.coords.longitude
+            + "<br><br>" + "Longitud: " + posicion.coords.longitude
         }
     </script>
 
