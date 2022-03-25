@@ -103,10 +103,10 @@
 
 
             for(marcador of marcadores){
-                    var marker = new google.maps.Marker({
+                    let marker = new google.maps.Marker({
+                    map: map,
                     position: new google.maps.LatLng(marcador.latitude, marcador.longitude),
                     //icon: icono,
-                    map: map,
                     title: marcador.name
                 });
             }
