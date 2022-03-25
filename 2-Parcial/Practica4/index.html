@@ -94,18 +94,18 @@
             const map = new google.maps.Map(document.getElementById("mapa"), propiedades);
             const marcadores = obtieneMarcadores();
 
-            var icono = {
+            /*var icono = {
                 url : "https://img.icons8.com/external-icongeek26-flat-icongeek26/344/external-tacos-mexican-food-icongeek26-flat-icongeek26.png",
                 scaledSize: new google.maps.Size(50,50),
                 origin: new google.maps.Point(0,0),
                 anchor: new google.maps.Point(0,0)
-            }
+            }*/
 
 
             for(marcador of marcadores){
                     var marker = new google.maps.Marker({
                     position: new google.maps.LatLng(marcador.latitude, marcador.longitude),
-                    icon: icono,
+                    //icon: icono,
                     map: map,
                     title: marcador.name
                 });
