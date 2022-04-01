@@ -57,58 +57,56 @@
             center: coordenadas,
             zoom: 2
         
-        }
+        };
 
-        function obtieneMarcadores(){
-
-            var markers = [
-                {
-                    name : "México",
-                    longitude : "-90.1276",
-                    latitude : "19.427"
-
-                },
-                {
-                    name : "Brasil",
-                    longitude : "-47.9292",
-                    latitude : "-15.7801"
-
-                },
-                {
-                    name : "España",
-                    longitude : "-3.70327",
-                    latitude : "40.4167"
-
-                }
-
-            ];
-
-            return markers
-
-        }
-
+       
         function iniciMapa(){
+            
+            fetch("paises.json")
+            .then(function (response) {
+            console.log(response)
 
-            const map = new google.maps.Map(document.getElementById("mapa"), propiedades);
-            const marcadores = obtieneMarcadores();
+                response.json().then(function (datos) {
+                    const map = new google.maps.Map(document.getElementById("mapa"), propiedades);
 
-            var icono = {
-                url : "https://img.icons8.com/external-icongeek26-flat-icongeek26/344/external-tacos-mexican-food-icongeek26-flat-icongeek26.png",
-                scaledSize: new google.maps.Size(50,50),
-                origin: new google.maps.Point(0,0),
-                anchor: new google.maps.Point(0,0)
-            }
+                    datos.forEach( marcador => {
 
+                        var informacion = "<strong>País:</strong>" + marcador.CountryName;
 
-            for(marcador of marcadores){
-                    let marker = new google.maps.Marker({
-                    map: map,
-                    position: new google.maps.LatLng(marcador.latitude, marcador.longitude),
-                    icon: icono,
-                    title: marcador.name
+                        var infowindow =  new google.maps.InfoWindow({
+                            content: informacion
+
+                        });
+
+                        var icono = {
+                        url : "https://img.icons8.com/nolan/344/marker.png",
+                        scaledSize: new google.maps.Size(50,50),
+                        origin: new google.maps.Point(0,0),
+                        anchor: new google.maps.Point(0,0)
+                        }
+
+                        let marker = new google.maps.Marker({
+                            map: map,
+                            position: new google.maps.LatLng(marcador.CapitalLatitude, marcador.CapitaalLongitude),
+                            icon: icono,
+                            title: marcador.CountryName
+                        });
+
+                        marker.addListener('click', function(){
+                            infowindow.open(map, marker);
+                        });
+
+                        
+                    });
                 });
-            }
+            })
+            .catch(function (error){
+                console.log('Hubo un error en la petición Fecth: ' + error.message);
+            }); 
 
+
+
+           
                 
         }
 
