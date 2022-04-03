@@ -62,10 +62,18 @@
             response.json().then(function (datos) {
                 datos.forEach( registro => {
 
+                    let row = document.createElement("div");
+                    row.className = "row";
+                    paises.appendChild(row);
+
+                    let col = document.createElement("div");
+                    col.className = "col-4";
+                    row.appendChild(col);
+
                     let card = document.createElement("div");
                     card.className = "card ";
                     card.style = "width: 18rem;";
-                    paises.appendChild(card);
+                    col.appendChild(card);
 
                     
                     let cardBody = document.createElement("div")
