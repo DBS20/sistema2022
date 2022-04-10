@@ -1,11 +1,13 @@
 #mapa{
-    height: 100%;
-    width: 100%;
+    height: 1024px;
+    width: auto;
 }
 
-html,.mapitaContenedor{
-    height: 100%;
-    width: 100%;
+
+
+.mapita{
+    height: 1024px;
+    width: auto;
     margin: 0;
     padding: 0;
 }
@@ -54,10 +56,12 @@ html,.mapitaContenedor{
 
 .cuerpo{
   
-    background: rgb(34,195,165);
-    background: linear-gradient(0deg, rgba(34,195,165,1) 3%, rgba(36,204,201,1) 27%, rgba(36,169,205,1) 58%, rgba(41,97,232,1) 82%, rgba(4,41,93,1) 100%);
-
-
+    height: 100%;
+    background-image: url("https://www.xtrafondos.com/descargar.php?id=2974&resolucion=1920x1200");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+   
 }
 
 .piePagina{
