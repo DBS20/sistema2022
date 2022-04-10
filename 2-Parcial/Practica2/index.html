@@ -24,34 +24,56 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,300;1,700&display=swap" rel="stylesheet">
 
 </head>
-<body>
-    
-
-    <div class="container">
-
+<body class="cuerpo">
+    <br>
+    <div class="container" id="contenido">
+        <!--Título-->
         <br>
-        <h1 class="fuentePersonalizadaTitulo contenedorTitulo">Países: </h1>
-        <div id="paises"></div>
+        <div class="container-fluid contenedorTitulo">
+            <div class="row">
+
+                <div class="col-9" id="coltitulo">
+                    <h1 class="fuentePersonalizadaTitulo"><p class="m-1 p-3">Países: </p></h1>
+                    
+                </div>
+
+                <div class="col-3" id="colicono">
+                    <img  id="icono" src="https://img.icons8.com/color/344/world-map-continents.png" alt="Logo"> 
+                </div>
+
+            </div>
+            <hr>
+        </div><br>
+        <!--FiN-->
+        
+
+        <!--Contenedor países-->
+        <div class ="container-fluid" id="paises"></div><br>
+        <!--FiN-->
+
+    
+        <!--INICIO Pie de Pagina-->
+        <div class="container-fluid bg-dark text-white piePagina">
+                
+            <div class="col-12 py-3 px-2">
+                <label>Ingeniería en Software y Sistemas Computacionales</label><br>
+                <label>Diana Bojorquez Soto (70624)</label>
+            </div>
+
+        </div><br>
+        <!--Fin-->
+
 
     </div>
 
     
-    <!--INICIO Pie de Pagina-->
-    <div class="container bg-dark text-white piePagina">
-            
-        <div class="col-12 py-3 px-2">
-            <label>Ingeniería en Software y Sistemas Computacionales</label><br>
-            <label>Diana Bojorquez Soto (70624)</label>
-        </div>
 
-    </div><br>
-    <!--Fin-->
+    
 
     
     
 
     <!--SCRIPT-->
-
     <script>
         var paises = document.getElementById("paises")
 
@@ -71,7 +93,7 @@
                     row.appendChild(col);
 
                     let card = document.createElement("div");
-                    card.className = "card ";
+                    card.className = "card m-1";
                     col.appendChild(card);
 
                     

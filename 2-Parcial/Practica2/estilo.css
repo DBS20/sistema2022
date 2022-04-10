@@ -15,6 +15,21 @@
 .contenedorTitulo{
     background-color:rgba(216, 216, 216, 0.822);
     height: 100px;
+    border-radius: 3px;
+}
+
+#coltitulo{
+    text-align: left;
+}
+
+#colicono{
+    text-align: right;
+}
+
+
+#icono{
+    width: 100px;
+    height: 100px;
 }
 
 #contenido{
@@ -23,8 +38,14 @@
     
 }
 
-
-
+.cuerpo{
+  
+    height: 100%;
+    background-image: url("https://cerebriti.b-cdn.net/uploads/bbd992d82794cd1286120f31b0bb5093.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
 
 .piePagina{
     text-align: center;
