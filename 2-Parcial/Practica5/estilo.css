@@ -1,0 +1,70 @@
+#mapa{
+    height: 1024px;
+    width: auto;
+}
+
+
+
+.mapita{
+    height: 1024px;
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.fuente{
+    font-family: 'Nunito', sans-serif;
+}
+
+.fuentePersonalizadaTitulo{
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+}
+
+
+.fuentePersonalizadaTexto{
+    font-family: 'Nunito', sans-serif;
+}
+
+.contenedorTitulo{
+    background-color:rgba(216, 216, 216, 0.822);
+    height: 150px;
+    border-radius: 3px;
+}
+
+#coltitulo{
+    text-align: left;
+}
+
+#colicono{
+    text-align: right;
+}
+
+
+#icono{
+    width: 100px;
+    height: 100px;
+}
+
+#contenido{
+   
+    background-color: rgba(240, 248, 255, 0.822);
+    
+}
+
+
+
+.cuerpo{
+  
+    height: 100%;
+    background-image: url("https://www.xtrafondos.com/descargar.php?id=2974&resolucion=1920x1200");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+   
+}
+
+.piePagina{
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+}
