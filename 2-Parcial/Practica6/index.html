@@ -6,17 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practica6</title>
 
-    <style>
-        #mapa{
-            height: 640px;
-            width: 100%;
-        }
 
-        html,body{
-            margin: 0;
-            padding: 0;
-        }
-    </style>
+    <!--Hoja Estilo personalizada-->
+   <link rel="StyleSheet" href="estilo.css" type="text/css" media="screen">
+
 
     <!--Hojas de Estilo Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -35,29 +28,74 @@
 <body>
     
    
-    <div class="container">
+    <div class="container" id="contenido">
 
         <div class="row">
-            <div class="col-12 text-center">
-                <h1>Map Clustering</h1>
+            <div class="col-12">
+                <!--Título-->
+                <br>
+                <div class="container-fluid contenedorTitulo">
+                    <div class="row">
+
+                        <div class="col-9" id="coltitulo">
+                            <h1 class="fuentePersonalizadaTitulo"><p class="m-1 p-3">Map Clustering: </p></h1>
+                            
+                        </div>
+
+                        <div class="col-3" id="colicono">
+                            <img  id="icono" src="https://media0.giphy.com/media/QtvEouZBOE8nPn7yFx/giphy.gif?cid=ecf05e47ofeix6xyzcxg2rcjx0g50471662exnee0q7dx6sz&rid=giphy.gif&ct=s" alt="Logo"> 
+                        </div>
+
+                    </div>
+                    
+                </div><hr>
+                <!--FiN-->
+
+            </div>
+        </div>
+        
+        <!--Controles-->
+        <div class="row contenedorBotones">
+            
+            <div class="col-6 col-md-4 col-lg-3">
+                <button class="fuentePersonalizadaTexto botones botonRoad" id="btnroadmap">Roadmap</button>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <button class="fuentePersonalizadaTexto botones botonSatellite" id="btnsatellite">Satellite</button>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <button class="fuentePersonalizadaTexto botones botonHybrid" id="btnhybrid">Hybrid</button>
+            </div>
+            <div class="col-6 col-md-12 col-lg-3">
+                <button class="fuentePersonalizadaTexto  botones botonTerrain" id="btnterrain">Terrain</button>
+            </div>
+        </div><br>
+        <!--Fin-->
+
+
+        <div class="row">
+            <div class="col-12 mapita">
+                <!--Mapa-->
                 <div class="container" style="position: relative; overflow: hidden;" id="mapa"></div>
+                <!--FiN-->
             </div>
-        </div>
+        </div><br>
+
 
         <div class="row">
-            <div class="col-3 text-center">
-                <button class="btn btn-primary" id="btnroadmap">roadmap</button>
-            </div>
-            <div class="col-3 text-center">
-                <button class="btn btn-warning" id="btnsatellite">satellite</button>
-            </div>
-            <div class="col-3 text-center">
-                <button class="btn btn-success" id="btnhybrid">hybrid</button>
-            </div>
-            <div class="col-3 text-center">
-                <button class="btn btn-danger" id="btnterrain">terrain</button>
+            <div class="cpl-12">
+                <div class="container-fluid bg-dark text-white piePagina">
+                        
+                    <div class="col-12 py-3 px-2">
+                        <label>Ingeniería en Software y Sistemas Computacionales</label><br>
+                        <label>Diana Bojorquez Soto (70624)</label>
+                    </div>
+        
+                </div><br>
+                
             </div>
         </div>
+        <!--Fin-->
 
     </div>
     

@@ -1,0 +1,111 @@
+#mapa{
+    height: 1024px;
+    width: auto;
+}
+
+
+
+.mapita{
+    height: 1024px;
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.fuente{
+    font-family: 'Nunito', sans-serif;
+}
+
+.fuentePersonalizadaTitulo{
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+}
+
+
+
+
+.fuentePersonalizadaTexto{
+    font-family: 'Nunito', sans-serif;   
+    font-weight: bold;
+    color: black;
+}
+
+.contenedorTitulo{
+    background-color:rgba(216, 216, 216, 0.822);
+    height: 150px;
+    border-radius: 3px;
+}
+
+#coltitulo{
+    text-align: left;
+}
+
+#colicono{
+    text-align: right;
+}
+
+
+#icono{
+    width: 100px;
+    height: 100px;
+}
+
+#contenido{
+   
+    background-color: rgba(240, 248, 255, 0.822);
+    
+}
+
+
+
+.cuerpo{
+  
+    height: 100%;
+    background-image: url("https://www.xtrafondos.com/descargar.php?id=2974&resolucion=1920x1200");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+   
+}
+
+.contenedorBotones{
+    text-align: center;
+}
+
+.botones{
+    width: 180px;
+    height: 45px;
+    margin: 3px;
+    border-radius: 3px;
+    border: 0px;
+}
+
+.botonRoad{
+    background: rgb(14,29,69);
+    background: linear-gradient(90deg, rgba(14,29,69,1) 2%, rgba(58,135,180,1) 51%, rgba(14,29,69,1) 98%);
+
+    
+}
+
+.botonSatellite{
+    background: rgb(134,89,6);
+    background: linear-gradient(90deg, rgba(134,89,6,1) 2%, rgba(223,209,8,1) 51%, rgba(134,89,6,1) 98%);
+
+}
+
+.botonHybrid{
+    background: rgb(32,75,31);
+    background: linear-gradient(90deg, rgba(32,75,31,1) 2%, rgba(147,223,8,1) 51%, rgba(32,75,31,1) 98%);
+
+}
+
+.botonTerrain{
+    background: rgb(83,9,9);
+    background: linear-gradient(90deg, rgba(83,9,9,1) 2%, rgba(227,27,27,1) 51%, rgba(83,9,9,1) 98%);
+
+}
+
+.piePagina{
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+}
