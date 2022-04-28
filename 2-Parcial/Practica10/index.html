@@ -85,6 +85,7 @@
 
             var coordenadas = { lat: 21.152639, lng: -101.711598}
 
+            //Mapa1
             var propiedades1 = {
                 center: coordenadas,
                 zoom: 12
@@ -92,6 +93,7 @@
             var mapa1 = new google.maps.Map(document.getElementById('map1'),propiedades1);
 
 
+            //Mapa2
             var propiedades2 = {
                 center: coordenadas,
                 zoom: 12,
@@ -99,6 +101,8 @@
             };
             var mapa2 = new google.maps.Map(document.getElementById('map2'),propiedades2);
 
+
+            //Mapa3
             var propiedades3 = {
                 center: coordenadas,
                 zoom: 12,
@@ -107,6 +111,7 @@
             };
             var mapa3 = new google.maps.Map(document.getElementById('map3'),propiedades3);
 
+            //Mapa4
             var propiedades4 = {
                 center: coordenadas,
                 zoom: 12,
@@ -118,6 +123,8 @@
             };
             var mapa4 = new google.maps.Map(document.getElementById('map4'),propiedades4);
 
+
+            //Mapa5
             var propiedades5 = {
                 center: coordenadas,
                 zoom: 12,
@@ -138,6 +145,35 @@
                 fullscreenCotrol: true
             };
             var mapa5 = new google.maps.Map(document.getElementById('map5'),propiedades5);
+
+
+            //Mapa6
+            var limites = {
+                north: 21.390039,
+                south: 20.858414,
+                east: -101.092990,
+                west: -102.149631
+            }
+            var propiedades6 = {
+                center: coordenadas,
+                zoom: 12,
+                restriction: {
+                    latlngBounds: limites,
+                    strictBounds: false
+                }
+            };
+            var mapa6 = new google.maps.Map(document.getElementById('map6'),propiedades6);
+
+            //Mapa7
+            var propiedades7 = {
+                center: coordenadas,
+                zoom: 19,
+                mapTypeID: "satellite"
+          
+            };
+            var mapa7 = new google.maps.Map(document.getElementById('map7'),propiedades7);
+
+
 
 
         }
