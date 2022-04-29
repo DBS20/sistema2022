@@ -7,7 +7,7 @@
     <title>Practica10</title>
 
     <style>
-        #map1,#map2,#map3,#map4,#map5,#map6{
+        #map1,#map2,#map3,#map4{
             height: 340px;
             width: 100%;
         }
@@ -61,69 +61,70 @@
                 <h4 class="text-center">Mapa con controlOptions</h4>
                 <div id="map4"></div>
             </div>
-
-            <div class="col-6">
-                <h4 class="text-center">Obtiene coordenadas con mapsEvent</h4>
-                <div id="map5"></div>
-            </div>
-
-            <div class="col-6">
-                <h4 class="text-center">add</h4>
-                <div id="map6"></div>
-            </div>
+           
         </div>
 
     </div>
     
+  
+
     <script>
-        var iniciMapa = ()=>{
 
-            var coordenadas = { lat: 21.152639, lng: -101.711598}
-            var propiedades = {
-                center: coordenadas,
-                zoom: 12
-            };
+    function iniciMapa(){
+    var coordenadas = {  lat: 21.152639, lng:  -101.711598 };
+    var propiedades = {
+        center: coordenadas,
+        zoom: 12
+    };
+    var mapa1 = new google.maps.Map(document.getElementById('map1'),propiedades);
+    var marker = new google.maps.Marker({
+        position: coordenadas,
+        map: mapa1
+    });
+    marker.addListener('click', function(){
+        mapa1.setZoom(8);
+        mapa1.setCenter(marker.getPosition());
+    });
 
-            var mapa1 = new google.maps.Map(document.getElementById('map1'),propiedades);
-            var marker = new google.maps.Marker({
-                position: coordenadas,
-                map: mapa1
-            });
-            marker.addListener('click',function(){
-                mapa1.setZoom(8);
-                mapa1.setCenter(marker.getPosition());
-            });
+    var mapa2 = new google.maps.Map(document.getElementById('map2'),propiedades);
+    var marker2 = new google.maps.Marker({
+        position: coordenadas,
+        map: mapa2
+    });
+    mapa2.addListener('center_changed', function(){
+        window.setTimeout( function(){
+            mapa2.panTo(marker2.getPosition());
+        },3000);
+    });
 
-
-            var mapa2 = new google.maps.Map(document.getElementById('map2'),propiedades);
-            var marker2 = new google.maps.Marker({
-                position: coordenadas,
-                map: mapa2
-            });
-            mapa2.addListener('center_ changed',function(){
-                window.setTimeout(function(){
-                    mapa2.panTo(marker2.getPosition());
-                },3000)
-            });
-
-
-            var mapa3 = new google.maps.Map(document.getElementById('map3'),propiedades);
-            mapa3.addListener('zoom_ changed',function(){
-                var infowindow = new google.maps.infowindow({
-                    content : 'Cambia el zoom',
-                    position : coordenadas
-                });
-                infowindow.open(mapa3);
-                nivelZoom = mapa.getZoom();
-                infowindow.setContent('Zoom:'+nivelZoom);
-            });
+    var mapa3 = new google.maps.Map(document.getElementById('map3'),propiedades);
+    mapa3.addListener('zoom_changed', function(){
+        var infowindow = new google.maps.InfoWindow({
+            content : 'Cambia el zoom',
+            position : coordenadas
+        });
+        infowindow.open(mapa3);
+        nivelZoom = mapa3.getZoom();
+        infowindow.setContent('Zoom:'+nivelZoom);
+    });
 
 
+    var mapa4 = new google.maps.Map(document.getElementById('map4'),propiedades);
+    mapa4.addListener('click', function(e){
+        console.log(e.latLng);
+        estableceMarcador(e.latLng);
+    });
+    function estableceMarcador(latLng){
+        var marker = new google.maps.Marker({
+            position: latLng,
+            map: mapa4
+        });
+        mapa4.panTo(latLng);
+    }
 
 
-
-
-        }
+            
+    }
 
     </script>
 
