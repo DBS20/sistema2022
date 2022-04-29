@@ -68,8 +68,9 @@
             </div>
 
             <div class="col-6">
-                <h4 class="text-center">-----------</h4>
+                <h4 class="text-center">addDomListener</h4>
                 <div id="map6"></div>
+                <button id="btnCentrar">Centrar</button>
             </div>
 
             
@@ -79,7 +80,7 @@
     
     <script>
 
-        function iniciMapa(){
+     function iniciMapa(){
         var coordenadas = {  lat: 21.152639, lng:  -101.711598 };
         var propiedades = {
             center: coordenadas,
@@ -130,12 +131,33 @@
             });
             mapa4.panTo(latLng);
         }
-    
-    
+
+        var mapa5 = new google.maps.Map(document.getElementById('map5'),propiedades);
+        var infowindow = new google.maps.InfoWindow({
+            content : 'Haz click para obtener las coordenadas',
+            position : coordenadas
+
+        });
+        infowindow.open(mapa5);
+        mapa5.addListener('click', function(evento){
+            infowindow.close();
+            infowindow = new google.maps.InfoWindow({position: evento.latLng});
+            infowindow.setContent(evento.latLng.toString());
+            infowindow.open(mapa5);
+        });
+
+        var mapa6 = new google.maps.Map(document.getElementById('map6'),propiedades);
+        google.maps.event.addDomListener(mapa6, 'click', function(){
+            window.alert('Se hizo click en el mapa');
+        });
+        var boton = document.getElementById('btnCentrar');
+        google.maps.event.addDomListener(boton, 'click', function(){
+            mapa6.panTo(coordenadas);
+        });
                 
         }
     
-        </script>
+    </script>
     
 
 
